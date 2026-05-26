@@ -177,6 +177,15 @@ body {
   left: 100%;
 }
 
+.btn-primary.added {
+  background-color: var(--color-detail-accent);
+  color: var(--color-charcoal-black);
+}
+
+.btn-primary.added:hover {
+  box-shadow: none;
+}
+
 .btn-outline {
   background-color: transparent;
   color: var(--color-charcoal-black);
@@ -216,9 +225,15 @@ body {
 }
 
 .nav-links {
-  display: flex;
+  display: none;
   gap: 32px;
   list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+  }
 }
 
 .nav-link {

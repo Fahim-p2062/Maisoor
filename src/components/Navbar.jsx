@@ -1,27 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ cartCount = 0 }) => {
   return (
     <nav className="navbar">
       <div className="nav-brand">
-        <a href="/" className="text-display-lg" style={{ color: 'var(--color-detail-accent)', fontSize: '32px', textDecoration: 'none' }}>
-          Maisoor
-        </a>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <img src="/logo.jpg" alt="Maisoor Logo" style={{ height: '50px', objectFit: 'contain' }} />
+        </Link>
       </div>
       
       <ul className="nav-links">
-        <li><a href="#home" className="nav-link text-label-caps">Home</a></li>
-        <li><a href="#shop" className="nav-link text-label-caps">Shop</a></li>
-        <li><a href="#collections" className="nav-link text-label-caps">Collections</a></li>
-        <li><a href="#fabrics" className="nav-link text-label-caps">Fabrics</a></li>
-        <li><a href="#about" className="nav-link text-label-caps">About</a></li>
+        <li><Link to="/" className="nav-link text-label-caps">Home</Link></li>
+        <li><Link to="/shop" className="nav-link text-label-caps">Shop</Link></li>
+        <li><Link to="/collection" className="nav-link text-label-caps">Collections</Link></li>
+        <li><Link to="/#fabrics" className="nav-link text-label-caps">Fabrics</Link></li>
+        <li><Link to="/#about" className="nav-link text-label-caps">About</Link></li>
       </ul>
 
       <div className="nav-utility">
-        <a href="#search" className="nav-link text-label-caps">Search</a>
+        <Link to="/collection" className="nav-link text-label-caps">Search</Link>
         <div className="nav-divider"></div>
-        <a href="#account" className="nav-link text-label-caps">Account</a>
-        <a href="#cart" className="nav-link text-label-caps">Cart (0)</a>
+        <Link to="/account" className="nav-link text-label-caps">Account</Link>
+        <Link to="/cart" className="nav-link text-label-caps">Cart ({cartCount})</Link>
       </div>
     </nav>
   );

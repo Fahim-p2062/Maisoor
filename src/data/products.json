@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Indian Printed Cotton Panjabi",
+    "price": "1,499.00৳",
+    "image": "product_1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Indian Printed Cotton Panjabi with Cuff Sleeves",
+    "price": "1,799.00৳",
+    "image": "product_2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Premium Chinese Bamboo Cotton Panjabi",
+    "price": "1,799.00৳",
+    "image": "product_3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Premium Chinese Samsung Cotton Panjabi",
+    "price": "999.00৳",
+    "image": "product_4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Premium Indian Striped Panjabi",
+    "price": "1,499.00৳",
+    "image": "product_5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Premium Indian Striped Panjabi with Cuff Sleeve",
+    "price": "1,799.00৳",
+    "image": "product_6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Premium Pakistani Cotton Cuff Sleeve Panjabi",
+    "price": "1,799.00৳",
+    "image": "product_7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Premium Pakistani Cotton Punjabi with Half Body Embroidery",
+    "price": "1,499.00৳",
+    "image": "product_8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Premium Popcorn Panjabi for Men",
+    "price": "1,499.00৳",
+    "image": "product_9.jpg"
+  }
+]

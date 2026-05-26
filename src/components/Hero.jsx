@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '../assets/hero_image_1779824502529.png';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <img src={heroImage} alt="Modern Gentleman" className="hero-bg animate-ken-burns" />
@@ -14,8 +17,8 @@ const Hero = () => {
         </p>
         
         <div className="hero-actions animate-fade-up delay-200">
-          <button className="btn-primary">Explore Collection</button>
-          <button className="btn-outline">Discover Fabrics</button>
+          <button className="btn-primary" onClick={() => navigate('/collection')}>Explore Collection</button>
+          <button className="btn-outline" onClick={() => navigate('/shop')}>Shop Now</button>
         </div>
       </div>
     </section>

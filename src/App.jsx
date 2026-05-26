@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Marquee from './components/Marquee';
-import ProductGrid from './components/ProductGrid';
 import Footer from './components/Footer';
 
+// Pages
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import Collection from './pages/Collection';
+
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Marquee />
-        <ProductGrid />
-      </main>
+    <Router>
+      <Navbar cartCount={cartItems.length} />
+      <Routes>
+        <Route path="/" element={<Home addToCart={addToCart} />} />
+        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+        <Route path="/collection" element={<Collection addToCart={addToCart} />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
